@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>谭晶</title>
+    <style type="text/css">
+        body{
+            background-image: url(./imgs/8.jpg);
+            background-size: 100% 100%;
+            height:100%;
+        }
+        html{
+            height:100%;
+        }
+        page{
+            font-size: 100px;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+        }
+        #c{
+            background-color: lightgreen;
+            animation: c 9.5s infinite;
+        }
+        #x{
+            background-color: red;
+            animation: x 9.5s infinite;
+        }
+        #q{
+            animation: q 9.5s infinite;
+        }
+        #d{
+            background-color: black;
+            color: white;
+            animation: d 9.5s infinite;
+        }
+        @keyframes c{
+            0%{opacity: 0}
+            20%{opacity: 100}
+            40%{opacity: 0}
+            100%{opacity: 0}
+        }
+        @keyframes x{
+            0%{opacity: 0}
+            20%{opacity: 0}
+            40%{opacity: 100}
+            60%{opacity: 0}
+            100%{opacity: 0}
+        }
+        @keyframes q{
+            0%{opacity: 0}
+            40%{opacity: 0}
+            60%{opacity: 100}
+            80%{opacity: 0}
+            100%{opacity: 0}
+        }
+        @keyframes d{
+            0%{opacity: 0}
+            60%{opacity: 0}
+            80%{opacity: 100}
+            100%{opacity: 0}
+        }
+    </style>
+</head>
+<body>
+<page id="c">而我依然年轻</page>
+<page id="x">也相信永恒</page>
+<page id="q">是不变的</page>
+<page id="d">曾经</page>
+    <audio src="bgm.wav" autoplay="autoplay" loop="loop">
+    </audio>
+</body>
+</html>
