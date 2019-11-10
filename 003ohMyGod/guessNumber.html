@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+<div id="message"></div>
+</body>
+<script>
+    var random = Math.random();
+    var binggo=false;
+    function guess() {
+        if (binggo){
+            return;
+        }
+
+        var guess = prompt("您猜是几点？");
+
+        if(!Number.isInteger(guess/1)||guess>6||guess<1){
+            document.getElementById("message").innerHTML="您的输入有误";
+            return;
+        }
+
+        console.info("random===="+random);
+        console.info("guess===="+guess);
+        var diff=Math.abs(random-guess);
+        console.info("diff===="+diff);
+        var str ;
+        if (guess == random) {
+           str="您猜对啦！！！"+"<img src=\"images/"+random+".jpg\"/>";
+            binggo=true;
+        }
+        else if(guess>random){
+            if(diff>1){
+              str="您猜的太大啦！！！";
+            }
+            else{
+              str="您猜的有点大！！！";
+            }
+        }
+        else{
+            if(diff>1){
+             str="您猜的太小啦！！！";
+            }
+            else{
+                str="您猜的有点小！！！";
+            }
+        }
+        document.getElementById("message").innerHTML=str
+    }
+    random = Math.floor(random * 6) + 1;
+    console.info(random);
+    // document.write(random);
+    // document.write("<img src=\"images/" + random + ".jpg\"/>")
+    guess();
+    guess();
+</script>
+</html>
