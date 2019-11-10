@@ -1,8 +1,14 @@
-page{
-    font-size: 100px;
-    position: absolute;
+html,body,page{
     width: 100%;
+    height: 100%;
+    margin: 0;
+}
+page{
+    font-size: 180px;
+    position: absolute;
+    height: 100%;
     text-align: center;
+    padding-top: 30%;
 }
 #c{
     background-color: lightgreen;
@@ -13,12 +19,19 @@ page{
     animation: x 10s infinite;
 }
 #q{
+    background-image: url("../imgs/8.jpg");
+    background-size: 100% 100%;
     animation: q 10s infinite;
 }
 #d{
     background-color: black;
     color: white;
     animation: d 10s infinite;
+}
+#h{
+    font-size: 60px;
+    display: block;
+    animation: h 10s infinite;
 }
 @keyframes c{
     0%{opacity: 0}
@@ -44,5 +57,12 @@ page{
     0%{opacity: 0}
     60%{opacity: 0}
     80%{opacity: 100}
+    100%{opacity: 0}
+}
+@keyframes h{
+    0%{opacity: 0}
+    60%{opacity: 0}
+    80%{opacity: 100}
+    90%{opacity: 100}
     100%{opacity: 0}
 }
